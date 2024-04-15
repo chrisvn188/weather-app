@@ -1,11 +1,11 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const isProduction = process.env.NODE_ENV == 'production';
+const isProduction = process.env.NODE_ENV == 'production'
 
-const stylesHandler = 'style-loader';
+const stylesHandler = 'style-loader'
 
 const config = {
   entry: './src/index.js',
@@ -15,10 +15,12 @@ const config = {
   devServer: {
     open: true,
     host: 'localhost',
+    hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: './src/index.html',
+      favicon: './src/images/favicon.ico',
     }),
 
     // Add your plugins here
@@ -40,13 +42,13 @@ const config = {
     ],
   },
   devtool: 'inline-source-map',
-};
+}
 
 module.exports = () => {
   if (isProduction) {
-    config.mode = 'production';
+    config.mode = 'production'
   } else {
-    config.mode = 'development';
+    config.mode = 'development'
   }
-  return config;
-};
+  return config
+}

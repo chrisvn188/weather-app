@@ -1,0 +1,88 @@
+:root {
+  --round: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  display: block;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  background-color: rgb(95, 95, 255);
+}
+
+.logo {
+  color: white;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border-radius: var(--round);
+  width: 20rem;
+}
+
+.search-input:valid {
+  border: 2px solid black;
+}
+
+.search-input:invalid {
+  border: 2px dashed red;
+  outline: none;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  border-radius: var(--round);
+}
+
+.weather-details-section {
+  padding: 2rem 5rem;
+}
+
+.location {
+  padding: 1rem;
+  background-color: #b9ceff;
+  display: inline-block;
+  border-radius: var(--round);
+  margin-bottom: 1rem;
+}
